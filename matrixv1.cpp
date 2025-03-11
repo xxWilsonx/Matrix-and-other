@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
 	srand(time(0));
-	int a, b, c, d, k;
+	int a, b, c, d, k,l;
 	cout << "stroki";
 	cin >> a;
 	cout << "stolbiki";
@@ -18,6 +18,8 @@ int main()
 	cin >> d;
 	cout << "kol-vo probelov";
 	cin >> k;
+	cout << "kol-vo probelov final";
+	cin >> l;
 	int** M1 = new int* [a];
 	for (int i = 0; i < a; i++)
 	{
@@ -27,7 +29,7 @@ int main()
 	{
 		for (int j = 0; j < b; j++)
 		{
-			M1[i][j] = rand() % 100;
+			M1[i][j] = rand() % 100 + 1;
 		}
 	}
 	int** M2 = new int* [c];
@@ -36,7 +38,7 @@ int main()
 		M2[i] = new int[d];
 		for (int j = 0; j < d; j++)
 		{
-			M2[i][j] = rand() % 100;
+			M2[i][j] = rand() % 100 + 1;
 		}
 	}
 	if (b != c)
@@ -84,7 +86,7 @@ int main()
 	{
 		for (int j = 0; j < b; j++)
 		{
-			cout << setw(k) << M3[i][j];
+			cout << setw(l) << M3[i][j];
 		}
 		cout << endl;
 	}
