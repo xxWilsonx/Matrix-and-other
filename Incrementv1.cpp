@@ -47,7 +47,7 @@ int main()
 	{
 		for (int j = 0; j < b; j++)
 		{
-			M1[i][j] = rand() % 100;
+			M1[i][j] = rand() % 100 + 1;
 		}
 	}
 	int** M2 = new int* [c];
@@ -56,7 +56,7 @@ int main()
 		M2[i] = new int[d];
 		for (int j = 0; j < d; j++)
 		{
-			M2[i][j] = rand() % 100;
+			M2[i][j] = rand() % 100 + 1;
 		}
 	}
 	if (b != c)
